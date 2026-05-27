@@ -1,0 +1,303 @@
+.projects {
+  padding: 120px 64px;
+  background: var(--cream);
+}
+
+.projects-header {
+  margin-bottom: 80px;
+}
+
+.projects-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.projects-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gray-light);
+}
+
+.projects-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+/* LIST */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-card:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.project-card--reverse {
+  direction: rtl;
+}
+
+.project-card--reverse > * {
+  direction: ltr;
+}
+
+/* IMAGE WRAP */
+.project-image-wrap {
+  position: relative;
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
+  overflow: visible;
+  min-height: 400px;
+}
+
+.project-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--black);
+  padding: 6px 12px;
+}
+
+.project-image-desktop {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-image-wrap:hover .project-image-desktop {
+  transform: scale(1.03);
+}
+
+/* PHONE MOCKUP */
+.project-image-phone {
+  position: absolute;
+  bottom: -40px;
+  right: -32px;
+  z-index: 4;
+}
+
+.phone-frame {
+  width: 100px;
+  background: var(--black);
+  border-radius: 16px;
+  padding: 8px 5px;
+  border: 2px solid #2a2a2a;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.phone-notch {
+  width: 28px;
+  height: 5px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  margin: 0 auto 6px;
+}
+
+.phone-screen {
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.phone-screen img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* INFO */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.project-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--gray-light);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.project-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.project-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--gray);
+  margin-bottom: 28px;
+  max-width: 380px;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.project-tech {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-primary {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--black);
+  padding: 13px 28px;
+  text-decoration: none;
+  border: 1px solid var(--black);
+  transition: background 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+.btn-secondary {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: transparent;
+  padding: 13px 28px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  border-color: var(--black);
+}
+
+.btn-disabled {
+  color: var(--gray-light);
+  border-color: var(--border);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .projects {
+    padding: 80px 32px;
+  }
+
+  .projects-header {
+    margin-bottom: 48px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 0;
+  }
+
+  .project-card--reverse {
+    direction: ltr;
+  }
+
+  .project-image-desktop {
+    height: 240px;
+  }
+
+  .project-image-phone {
+    bottom: -32px;
+    right: -16px;
+  }
+
+  .phone-frame {
+    width: 80px;
+  }
+
+  .phone-screen img {
+    height: 140px;
+  }
+
+  .project-info {
+    padding-right: 0;
+  }
+}
+
+/* Chef Claude card — warm neutral treatment */
+.project-card:nth-child(2) .project-image-wrap {
+  background: #f5ede0;
+  border-color: #e8d5bc;
+}
+
+.project-card:nth-child(2) .project-tag {
+  background: #8b6f47;
+}
+
+.project-card:nth-child(2) .project-tech {
+  border-color: #e8d5bc;
+  color: #8b6f47;
+}

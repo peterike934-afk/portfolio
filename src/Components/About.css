@@ -1,0 +1,161 @@
+.about {
+  padding: 120px 64px;
+  background: var(--black);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+/* LEFT */
+.about-left {
+  position: sticky;
+  top: 80px;
+}
+
+.about-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #444;
+}
+
+.about-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 4.5vw, 64px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--cream);
+  margin-bottom: 48px;
+}
+
+.about-heading em {
+  font-style: italic;
+  color: #888;
+}
+
+.about-signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: #222;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+/* RIGHT */
+.about-right {
+  padding-top: 8px;
+}
+
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #999;
+  margin-bottom: 28px;
+}
+
+.about-text:last-of-type {
+  margin-bottom: 56px;
+}
+
+/* STATS */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid #222;
+  padding-top: 40px;
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 24px;
+  border-right: 1px solid #222;
+}
+
+.about-stat:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 24px;
+}
+
+.about-stat:nth-child(2) {
+  padding-left: 24px;
+}
+
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about {
+    padding: 80px 32px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-left {
+    position: static;
+  }
+
+  .about-signature {
+    font-size: 56px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .about-stat:last-child {
+    padding-left: 16px;
+  }
+
+  .about-stat:nth-child(2) {
+    padding-left: 16px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+}
