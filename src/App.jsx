@@ -1,7 +1,8 @@
-import Hero from "./Components/Hero";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import Projects from "./Components/Projects";
+import Hero from './Components/Hero'
+import Projects from './Components/Projects'
+import About from './Components/About'
+import Skills from './Skills'
+import Contact from './Components/Contact'
 
 function App() {
   return (
